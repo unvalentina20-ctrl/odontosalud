@@ -86,14 +86,14 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
       />
 
       <header
-        className={`fixed top-3 sm:top-5 left-0 right-0 z-50 mx-auto flex w-full max-w-full justify-center font-sans px-3 sm:px-6 transition-all duration-300 ease-in-out ${
+        className={`fixed top-3 sm:top-5 left-0 right-0 z-50 mx-auto flex w-full max-w-full justify-center font-sans px-3 sm:px-6 select-none transition-all duration-300 ease-in-out ${
           visible || mobileMenuOpen
             ? 'translate-y-0 opacity-100 pointer-events-auto' 
             : '-translate-y-24 opacity-0 pointer-events-none'
         }`}
       >
         {/* Navbar Pill Container with high-contrast glassmorphism */}
-        <div className="relative flex w-full max-w-screen-xl items-center justify-between border border-white/70 bg-white/80 backdrop-blur-xl py-2 pl-4 pr-2 sm:py-2.5 sm:pl-6 sm:pr-3 rounded-full shadow-lg shadow-slate-900/5 transition-all">
+        <div className="relative flex w-full max-w-screen-xl items-center justify-between border border-white/70 bg-white/80 backdrop-blur-xl py-2 pl-4 pr-2 sm:py-2.5 sm:pl-6 sm:pr-3 rounded-full shadow-lg shadow-slate-900/5 transition-all select-none outline-none [-webkit-tap-highlight-color:transparent]">
           
           {/* Brand Logo */}
           <div onClick={() => scrollTo('inicio')} className="flex items-center gap-2 sm:gap-2.5 cursor-pointer group select-none">
@@ -132,7 +132,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
           {/* Mobile Menu Toggle Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 text-slate-800 hover:bg-slate-100 rounded-full transition-colors cursor-pointer"
+            className="lg:hidden p-2 text-slate-800 active:bg-slate-200/50 rounded-full transition-colors cursor-pointer outline-none focus:outline-none select-none [-webkit-tap-highlight-color:transparent]"
             aria-label="Abrir menú de navegación"
           >
             {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
