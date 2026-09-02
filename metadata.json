@@ -1,0 +1,6 @@
+{
+  "name": "Centro Odontológico",
+  "description": "Sitio web mobile-first responsive para centro odontológico con reserva de citas online, odontograma interactivo, catálogo de tratamientos, calculadora de presupuesto y asistente virtual.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
