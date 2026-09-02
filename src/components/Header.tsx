@@ -129,24 +129,14 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
             </button>
           </div>
 
-          {/* Mobile Right Controls: Quick Book + Menu Button */}
-          <div className="flex lg:hidden items-center gap-1.5">
-            <button
-              onClick={onOpenBooking}
-              className="inline-flex items-center gap-1.5 rounded-full bg-slate-900 px-3.5 py-1.5 text-xs font-medium text-white shadow-sm"
-            >
-              <span>Turno</span>
-              <ArrowRight className="w-3 h-3 text-sky-300" />
-            </button>
-
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-slate-800 hover:bg-slate-100 rounded-full transition-colors"
-              aria-label="Abrir menú de navegación"
-            >
-              {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-            </button>
-          </div>
+          {/* Mobile Menu Toggle Button */}
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="lg:hidden p-2 text-slate-800 hover:bg-slate-100 rounded-full transition-colors cursor-pointer"
+            aria-label="Abrir menú de navegación"
+          >
+            {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          </button>
 
         </div>
 
