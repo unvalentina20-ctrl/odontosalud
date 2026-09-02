@@ -127,7 +127,7 @@ export const TestimonialsStackSection: React.FC = () => {
     <section 
       ref={containerRef}
       id="testimonios" 
-      className="mx-auto flex w-full flex-col items-center justify-start py-20 relative bg-white min-h-screen border-b border-slate-100"
+      className="mx-auto flex w-full max-w-full overflow-hidden flex-col items-center justify-start py-20 relative bg-white min-h-screen border-b border-slate-100"
     >
       {/* Title Header - Cleanly Positioned at Top */}
       <div className="w-full text-center px-4 pt-8 pb-4 z-10">
@@ -137,7 +137,7 @@ export const TestimonialsStackSection: React.FC = () => {
       </div>
 
       {/* Cards Display Box - Positioned BELOW the Title Header */}
-      <div className="relative z-20 flex justify-center items-center h-[460px] w-full max-w-lg mt-8">
+      <div className="relative z-20 flex justify-center items-center h-[460px] w-full max-w-full overflow-hidden mt-8">
         {TESTIMONIALS.map((item, index) => (
           <div
             key={item.id}

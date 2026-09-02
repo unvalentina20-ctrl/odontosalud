@@ -20,11 +20,11 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-[#000B33] font-sans antialiased selection:bg-sky-500 selection:text-white">
+    <div className="min-h-screen w-full max-w-full overflow-x-hidden bg-white text-[#000B33] font-sans antialiased selection:bg-sky-500 selection:text-white">
       
       <Header onOpenBooking={handleOpenBooking} />
 
-      <main>
+      <main className="w-full max-w-full overflow-x-hidden">
         <HeroSection onOpenBooking={handleOpenBooking} />
         <LogoMarqueeSection />
         <TestimonialsStackSection />

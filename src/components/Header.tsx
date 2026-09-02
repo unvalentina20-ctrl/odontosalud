@@ -86,7 +86,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
       />
 
       <header
-        className={`fixed top-3 sm:top-5 inset-x-0 z-50 mx-auto flex w-full justify-center font-sans px-3 sm:px-6 transition-all duration-300 ease-in-out ${
+        className={`fixed top-3 sm:top-5 left-0 right-0 z-50 mx-auto flex w-full max-w-full justify-center font-sans px-3 sm:px-6 transition-all duration-300 ease-in-out ${
           visible || mobileMenuOpen
             ? 'translate-y-0 opacity-100 pointer-events-auto' 
             : '-translate-y-24 opacity-0 pointer-events-none'

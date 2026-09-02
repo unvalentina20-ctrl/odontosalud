@@ -39,9 +39,9 @@ function SubtleCounter({ target, suffix, inView }: { target: number; suffix: str
   }, [inView, target]);
 
   return (
-    <div className="inline-flex items-baseline font-sans text-[80px] md:text-[100px] leading-[120%] tracking-[-2px] text-[#6F7C86] font-normal select-none">
+    <div className="inline-flex items-baseline font-sans text-5xl sm:text-6xl md:text-7xl lg:text-[85px] leading-[120%] tracking-[-2px] text-[#6F7C86] font-normal select-none">
       <span className="tabular-nums font-normal">{val}</span>
-      <span className="text-[60px] md:text-[80px] text-[#6F7C86]/80 font-normal">{suffix}</span>
+      <span className="text-3xl sm:text-4xl md:text-5xl lg:text-[65px] text-[#6F7C86]/80 font-normal">{suffix}</span>
     </div>
   );
 }
@@ -66,7 +66,7 @@ export const AnimatedStatsSection: React.FC = () => {
 
   return (
     <section ref={ref} id="estadisticas" className="w-full bg-white py-24 lg:py-36 font-sans border-b border-slate-100">
-      <div className="container mx-auto max-w-[1700px] px-4">
+      <div className="container mx-auto max-w-7xl overflow-hidden px-4">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {STATS.map((stat, i) => (
             <div key={i} className="flex flex-col items-center">
